@@ -227,14 +227,15 @@
         });
     
         function UpdateData(CpuJson){
-                console.log(CpuJson);
-                document.getElementById("date").innerText = CpuJson['CPUdata']['Date'];
-                document.getElementById("temp").innerText = CpuJson['CPUdata']['Temperature'] + "°C";
-                document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";
-                document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go";
-                document.getElementById("text").value = CpuJson['CPUdata']['Text'];
-                this.getText();
-            }   
+            console.log(CpuJson);
+            document.getElementById("date").innerText = CpuJson['CPUdata']['Date'];
+            document.getElementById("temp").innerText = CpuJson['CPUdata']['Temperature'] + "°C";
+            document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";
+            document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go";
+            let text = CpuJson['CPUdata']['Text'];
+            document.getElementById("text").value = text;
+            this.getText();
+        }
     
         const sendMsg = () =>{
             console.log("Client : Ping")
