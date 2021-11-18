@@ -1,6 +1,6 @@
 function getText(){
 
-var text = document.getElementById('text').innerText;
+var text = document.getElementById('text').value;
 console.log(text)
 console.log(this.findWord(text))
 
