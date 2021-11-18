@@ -29,7 +29,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p style="background: #dddddd;width: 1127.6px;height: 94px;padding: -8px; color:black;" id="text"></p>
+                            <input type="text" id="text" class="form-control" readonly>
                         </div>
                     </div>
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
@@ -212,7 +212,7 @@
                 document.getElementById("temp").innerText = CpuJson['CPUdata']['Temperature'] + "°C";
                 document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";
                 document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go"
-                document.getElementById("text").innerText = CpuJson['CPUdata']['Text']
+                document.getElementById("text").value = CpuJson['CPUdata']['Text']
                 this.getText()
             }   
     
