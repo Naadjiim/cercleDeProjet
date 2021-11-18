@@ -23,15 +23,9 @@
                     <img class="rounded-circle img-profile" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: auto; text-align: center;">
                 </nav>
 
-                <p id="bonjour">Compteur bonjour</p>
-                <p id="martinique">Compteur martinique</p>
+                <p id="bonjour"></p>
+                <p id="martinique"></p>
 
-                <?php
-                    //$handle = fopen("ftp://pi:cercle13@192.168.3.209/home/pi/test.txt", "w");
-                    //ftruncate($handle, 0);
-                    //rewind($handle);
-                    //fclose($handle);
-                ?>
 
                 <div class="container">
                     <div class="row">
@@ -203,7 +197,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" onclick="Close();">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -241,11 +235,12 @@
             document.getElementById("temp").innerText = CpuJson['CPUdata']['Temperature'] + "°C";
             document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";
             document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go";
+
             let text = CpuJson['CPUdata']['Text'];
-            document.getElementById("text").value = text;
-            this.getText();
-            document.getElementById("bonjour").innerText = localStorage["bonjour"];
-            document.getElementById("martinique").innerText = localStorage["martinique"];
+            if(text != "" && text != document.getElementById("text").innerText){
+                document.getElementById("text").value = text;
+                this.getText(text);
+            }
         }
     
         const sendMsg = () =>{
@@ -260,6 +255,9 @@
         if (typeof localStorage["Counterrr"] == 'undefined') {
           localStorage["Counterrr"] = 0;
         }
+
+        document.getElementById("bonjour").value = localStorage["bonjour"];
+        document.getElementById("bonjour").value = localStorage["martinique"];
 
      </script>
     
