@@ -1,26 +1,30 @@
-function getText(text){
-        var str = text;
-        //var str = document.getElementById('text').value;
-        var string_norm = str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+var tab = ["petit dejeune",
+        "demi pension",
+        "marseille",
+        "pension complÃ¨te",
+        "all inclusive",
+        "tous inclut",
+        "martinique",
+        "hÃ©bergements seuls",
+        "contre proposition",
+        "cinque nuits",
+        "douze juillet deux mille vingt deux",
+        "deux adultes deux enfants un bb",
+        "bonjour"
+]
 
-        if(document.getElementById('modal').style.display != "block") {
-                if (string_norm.includes("demi pension"))
+function getText() {
+        var text = document.getElementById('text').value.toLowerCase();
+
+        for (var i = 0; i-1 <= tab.length; i++) {
+                var output = text.match(tab[i])
+                if ( output == tab[i] ) {
+                        var test = text.match(tab[i])
                         document.getElementById('modal').style.display = "block";
-                else if (string_norm.includes('petit dejeuner'))
-                        document.getElementById('modal').style.display = "block";
-                else if (string_norm.includes('hebergements'))
-                        document.getElementById('modal').style.display = "block";
-                else if (string_norm.includes('bonjour')) {
-                        document.getElementById('modal').style.display = "block";
-                } else if (string_norm.includes('martinique')) {
-                        document.getElementById('modal').style.display = "block";
+                        console.log(test[0])
                 }
-                else if (string_norm.includes('marseille'))
-                        document.getElementById('modal').style.display = "block";
-                else
-                        document.getElementById('modal').style.display = "none";
-
         }
+        return test[0]
 }
 
 function Close(){
