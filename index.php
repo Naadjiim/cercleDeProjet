@@ -4,12 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Dashboard - Brand</title>
+    <title>Cercle de projet</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel = "stylesheet" type="text/css" href = "stylesheet.css">
 </head>
 
 <body id="page-top">
@@ -17,25 +20,33 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group"></div>
-                        </form><img class="border rounded-circle img-profile" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: 3px; text-align: center;">
-                    </div>
+                    <img class="rounded-circle img-profile" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: auto; text-align: center;">
                 </nav>
-                <div class="container-fluid">
-                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Votre texte</h3>
-                    </div>
+
+                <p id="bonjour"></p>
+                <p id="martinique"></p>
+
+
+                <div class="container">
                     <div class="row">
-                        <div class="col">
-                            <input type="text" id="text" class="form-control" readonly>
-                            <input type="text" id="test" class="form-control" value="Je mets les hôtels en demi pension" readonly>
+                        <div class="mb-4 mt-4">
+                            <div class="col-md-12">
+                                <h2 class="text-dark mb-4 text-center titre">Reconnaissance vocale</h2>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" id="text" class="form-control text-center" readonly>
+                                <input type="text" id="test" class="form-control" value="Je mets les hôtels en demi pension" readonly>
+                            </div>
                         </div>
                     </div>
-                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Raspberry</h3>
+                </div>
+
+                <div class="container">
+
+                    <div class="mb-4 mt-4">
+                        <h2 class="text-dark text-center">Données du Raspberry</h2>
                     </div>
+
                     <div class="row">
                         <div class="col-md-6 col-xl-3 mb-4">
                             <div class="card shadow border-start-primary py-2">
@@ -56,7 +67,7 @@
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
                                             <div class="text-uppercase text-success fw-bold text-xs mb-1"><span><strong>CPU</strong><br></span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span id="cpu"></span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span id="cpu">0</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-microchip fa-2x text-gray-300"></i></div>
                                     </div>
@@ -71,7 +82,7 @@
                                             <div class="text-uppercase text-info fw-bold text-xs mb-1"><span><strong>RAM</strong><br></span></div>
                                             <div class="row g-0 align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span id="ram"></span></div>
+                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span id="ram">0</span></div>
                                                 </div>
   
                                             </div>
@@ -87,7 +98,7 @@
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
                                             <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span><strong>Date</strong><br></span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span id="date"></span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span id="date">0</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-calendar-week fa-2x text-gray-300"></i></div>
                                     </div>
@@ -95,6 +106,14 @@
                             </div>
                         </div>
                     </div>
+
+                </div>
+
+                <div class="container">
+                    <div class="mb-4 mt-4">
+                        <h2 class="text-dark text-center">Statistiques d'utilisation</h2>
+                    </div>
+
                     <div class="row">
                         <div class="col-lg-7 col-xl-8">
                             <div class="card shadow mb-4">
@@ -112,6 +131,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-5 col-xl-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
@@ -129,6 +149,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="row">
                         <div class="col-lg-6 mb-4">
@@ -163,6 +184,7 @@
                     </div>
                 </div>
             </div>
+
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
@@ -176,7 +198,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="close" onclick="Close();">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -186,6 +208,7 @@
           </div>
         </div>
       </div>
+
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/chart.min.js"></script>
@@ -208,19 +231,35 @@
         });
     
         function UpdateData(CpuJson){
-                //console.log(CpuJson);
-                document.getElementById("date").innerText = CpuJson['CPUdata']['Date'];
-                document.getElementById("temp").innerText = CpuJson['CPUdata']['Temperature'] + "°C";
-                document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";
-                document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go"
-                document.getElementById("text").value = CpuJson['CPUdata']['Text']
-                this.getText()
-            }   
+            console.log(CpuJson);
+            document.getElementById("date").innerText = CpuJson['CPUdata']['Date'];
+            document.getElementById("temp").innerText = CpuJson['CPUdata']['Temperature'] + "°C";
+            document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";
+            document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go";
+
+            let text = CpuJson['CPUdata']['Text'];
+            if(text != "" && text != document.getElementById("text").innerText){
+                document.getElementById("text").value = text;
+                this.getText(text);
+            }
+        }
     
         const sendMsg = () =>{
             console.log("Client : Ping")
             socket.send("Ping")
         }
+
+
+        if (typeof localStorage["Counterr"] == 'undefined') {
+          localStorage["Counterr"] = 0;
+        }
+        if (typeof localStorage["Counterrr"] == 'undefined') {
+          localStorage["Counterrr"] = 0;
+        }
+
+        document.getElementById("bonjour").value = localStorage["bonjour"];
+        document.getElementById("bonjour").value = localStorage["martinique"];
+
      </script>
     
      <script src="script.js"></script>
