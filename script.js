@@ -1,7 +1,7 @@
 var tab = ["petit dejeune",
     "demi pension",
     "marseille",
-    "pension complète",
+    "pension compléte",
     "all inclusive",
     "tous inclut",
     "martinique",
@@ -19,6 +19,7 @@ function getText() {
         var output = text.match(tab[i])
         if ( output == tab[i] ) {
             var test = text.match(tab[i])
+            document.getElementById('modal').style.display = "block";
             console.log(test[0])
         }
     }
