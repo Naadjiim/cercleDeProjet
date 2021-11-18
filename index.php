@@ -27,6 +27,7 @@
                 <p id="martinique"></p>
 
 
+
                 <div class="container">
                     <div class="row">
                         <div class="mb-4 mt-4">
@@ -35,7 +36,6 @@
                             </div>
                             <div class="col-md-12">
                                 <input type="text" id="text" class="form-control text-center" readonly>
-                                <input type="text" id="test" class="form-control" value="Je mets les hôtels en demi pension" readonly>
                             </div>
                         </div>
                     </div>
@@ -257,8 +257,7 @@
           localStorage["Counterrr"] = 0;
         }
 
-        document.getElementById("bonjour").value = localStorage["bonjour"];
-        document.getElementById("bonjour").value = localStorage["martinique"];
+        console.log(document.getElementById('modal').style.display);
 
      </script>
     
