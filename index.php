@@ -23,6 +23,15 @@
                     <img class="rounded-circle img-profile" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: auto; text-align: center;">
                 </nav>
 
+                <p id="bonjour">Compteur bonjour</p>
+                <p id="martinique">Compteur martinique</p>
+
+                <?php
+                    $handle = fopen("ftp://pi:cercle13@192.168.3.209/home/pi/test.txt", "w");
+                    ftruncate($handle, 0);
+                    rewind($handle);
+                    fclose($handle);
+                ?>
 
                 <div class="container">
                     <div class="row">
@@ -235,12 +244,23 @@
             let text = CpuJson['CPUdata']['Text'];
             document.getElementById("text").value = text;
             this.getText();
+            document.getElementById("bonjour").innerText = localStorage["bonjour"];
+            document.getElementById("martinique").innerText = localStorage["martinique"];
         }
     
         const sendMsg = () =>{
             console.log("Client : Ping")
             socket.send("Ping")
         }
+
+
+        if (typeof localStorage["Counterr"] == 'undefined') {
+          localStorage["Counterr"] = 0;
+        }
+        if (typeof localStorage["Counterrr"] == 'undefined') {
+          localStorage["Counterrr"] = 0;
+        }
+
      </script>
     
      <script src="script.js"></script>
