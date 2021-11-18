@@ -30,6 +30,7 @@
                     <div class="row">
                         <div class="col">
                             <input type="text" id="text" class="form-control" readonly>
+                            <input type="text" id="test" class="form-control" value="Je mets les hôtels en demi pension" readonly>
                         </div>
                     </div>
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
@@ -202,12 +203,12 @@
         });
     
         socket.addEventListener("message", function (event){
-            console.log("Serveur : Data receive")
+           // console.log("Serveur : Data receive")
             UpdateData(JSON.parse(event.data))
         });
     
         function UpdateData(CpuJson){
-                console.log(CpuJson);
+                //console.log(CpuJson);
                 document.getElementById("date").innerText = CpuJson['CPUdata']['Date'];
                 document.getElementById("temp").innerText = CpuJson['CPUdata']['Temperature'] + "°C";
                 document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";

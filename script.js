@@ -1,31 +1,26 @@
-function getText(){
+var tab = ["petit dejeune",
+    "demi pension",
+    "marseille",
+    "pension compl√®te",
+    "all inclusive",
+    "tous inclut",
+    "martinique",
+    "h√©bergements seuls",
+    "contre proposition",
+    "cinque nuits",
+    "douze juillet deux mille vingt deux",
+    "deux adultes deux enfants un bb"
+]
 
-var text = document.getElementById('text').value;
-console.log(text)
-console.log(this.findWord(text))
+function getText() {
+    var text = document.getElementById('test').value.toLowerCase();
 
+    for (var i = 0; i-1 <= tab.length; i++) {
+        var output = text.match(tab[i])
+        if ( output == tab[i] ) {
+            var test = text.match(tab[i])
+            console.log(test[0])
+        }
+    }
+    return test[0]
 }
-
-function findWord(str) {
-    var word = str.split(' ').some(
-        function(w){
-            if(w == 'dÈjeuner')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'pension')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'hÈbergements')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'pension')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'inclus')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'martinique')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'marseille')
-            document.getElementById('modal').style.display = "block";
-            else
-            document.getElementById('modal').style.display = "none";
-
-            return w
-        })
-  }
