@@ -27,10 +27,10 @@
                 <p id="martinique">Compteur martinique</p>
 
                 <?php
-                    $handle = fopen("ftp://pi:cercle13@192.168.3.209/home/pi/test.txt", "w");
-                    ftruncate($handle, 0);
-                    rewind($handle);
-                    fclose($handle);
+                    //$handle = fopen("ftp://pi:cercle13@192.168.3.209/home/pi/test.txt", "w");
+                    //ftruncate($handle, 0);
+                    //rewind($handle);
+                    //fclose($handle);
                 ?>
 
                 <div class="container">
