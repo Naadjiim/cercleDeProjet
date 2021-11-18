@@ -1,21 +1,19 @@
 function getText(){
+        var str = document.getElementById('text').value;
+        var string_norm = str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
-var str = document.getElementById('text').value;
-console.log(str)
-
-if(str.includes( 'déjeuner'))
-        document.getElementById('modal').style.display = "block";
-else if(str.includes('pension')) //GOOD
-        document.getElementById('modal').style.display = "block";
-else if(str.includes('hébergements'))
-        document.getElementById('modal').style.display = "block";
-else if(str.includes('inclus')) //GOOD
-        document.getElementById('modal').style.display = "block";
-else if(str.includes('martinique')) //GOOD
-        document.getElementById('modal').style.display = "block";
-else if(str.includes('marseille')) //GOOD
-        document.getElementById('modal').style.display = "block";
-else
-        document.getElementById('modal').style.display = "none";
-
+        if(string_norm.includes( "demi pension"))
+                document.getElementById('modal').style.display = "block";
+        else if(string_norm.includes('petit dejeuner'))
+                document.getElementById('modal').style.display = "block";
+        else if(string_norm.includes('hebergements'))
+                document.getElementById('modal').style.display = "block";
+        else if(string_norm.includes('inclus'))
+                document.getElementById('modal').style.display = "block";
+        else if(string_norm.includes('martinique'))
+                document.getElementById('modal').style.display = "block";
+        else if(string_norm.includes('marseille'))
+                document.getElementById('modal').style.display = "block";
+        else
+                document.getElementById('modal').style.display = "none";
 }
