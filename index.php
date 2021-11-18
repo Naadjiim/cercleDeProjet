@@ -36,7 +36,6 @@
                             </div>
                             <div class="col-md-12">
                                 <input type="text" id="text" class="form-control text-center" readonly>
-                                <input type="text" id="test" class="form-control" value="Je mets les hôtels en demi pension" readonly>
                             </div>
                         </div>
                     </div>
