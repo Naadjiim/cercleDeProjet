@@ -1,31 +1,21 @@
 function getText(){
 
-var text = document.getElementById('text').value;
-console.log(text)
-console.log(this.findWord(text))
+var str = document.getElementById('text').value;
+console.log(str)
+
+if(str.includes( 'déjeuner'))
+        document.getElementById('modal').style.display = "block";
+else if(str.includes('pension')) //GOOD
+        document.getElementById('modal').style.display = "block";
+else if(str.includes('hébergements'))
+        document.getElementById('modal').style.display = "block";
+else if(str.includes('inclus')) //GOOD
+        document.getElementById('modal').style.display = "block";
+else if(str.includes('martinique')) //GOOD
+        document.getElementById('modal').style.display = "block";
+else if(str.includes('marseille')) //GOOD
+        document.getElementById('modal').style.display = "block";
+else
+        document.getElementById('modal').style.display = "none";
 
 }
-
-function findWord(str) {
-    var word = str.split(' ').some(
-        function(w){
-            if(w == 'déjeuner')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'pension')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'hébergements')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'pension')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'inclus')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'martinique')
-            document.getElementById('modal').style.display = "block";
-            else if(w == 'marseille')
-            document.getElementById('modal').style.display = "block";
-            else
-            document.getElementById('modal').style.display = "none";
-
-            return w
-        })
-  }
