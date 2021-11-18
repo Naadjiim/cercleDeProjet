@@ -27,6 +27,7 @@
                 <p id="martinique"></p>
 
 
+
                 <div class="container">
                     <div class="row">
                         <div class="mb-4 mt-4">
@@ -257,8 +258,7 @@
           localStorage["Counterrr"] = 0;
         }
 
-        document.getElementById("bonjour").value = localStorage["bonjour"];
-        document.getElementById("bonjour").value = localStorage["martinique"];
+        console.log(document.getElementById('modal').style.display);
 
      </script>
     
