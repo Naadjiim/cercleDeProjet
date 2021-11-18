@@ -7,9 +7,12 @@
     <title>Dashboard - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel = "stylesheet" type="text/css" href = "stylesheet.css">
 </head>
 
 <body id="page-top">
@@ -17,24 +20,27 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group"></div>
-                        </form><img class="border rounded-circle img-profile" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: 3px; text-align: center;">
-                    </div>
+                    <img class="border rounded-circle img-profile" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: auto; text-align: center;">
                 </nav>
-                <div class="container-fluid">
-                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Votre texte</h3>
-                    </div>
+                <div class="container">
                     <div class="row">
-                        <div class="col">
-                            <input type="text" id="text" class="form-control" readonly>
+                        <div class="mb-4 mt-4">
+                            <div class="col-md-12">
+                                <h2 class="text-dark mb-4 text-center titre">Reconnaissance vocale</h2>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" id="text" class="form-control text-center" readonly>
+                            </div>
                         </div>
                     </div>
-                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Raspberry</h3>
+                </div>
+
+                <div class="container">
+
+                    <div class="mb-4 mt-4">
+                        <h2 class="text-dark text-center">Données du Raspberry</h2>
                     </div>
+
                     <div class="row">
                         <div class="col-md-6 col-xl-3 mb-4">
                             <div class="card shadow border-start-primary py-2">
@@ -94,6 +100,14 @@
                             </div>
                         </div>
                     </div>
+
+                </div>
+
+                <div class="container">
+                    <div class="mb-4 mt-4">
+                        <h2 class="text-dark text-center">Statistiques d'utilisation</h2>
+                    </div>
+
                     <div class="row">
                         <div class="col-lg-7 col-xl-8">
                             <div class="card shadow mb-4">
@@ -162,6 +176,7 @@
                     </div>
                 </div>
             </div>
+
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
@@ -185,6 +200,7 @@
           </div>
         </div>
       </div>
+
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/chart.min.js"></script>
@@ -211,9 +227,9 @@
                 document.getElementById("date").innerText = CpuJson['CPUdata']['Date'];
                 document.getElementById("temp").innerText = CpuJson['CPUdata']['Temperature'] + "°C";
                 document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";
-                document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go"
-                document.getElementById("text").value = CpuJson['CPUdata']['Text']
-                this.getText()
+                document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go";
+                document.getElementById("text").value = CpuJson['CPUdata']['Text'];
+                this.getText();
             }   
     
         const sendMsg = () =>{
