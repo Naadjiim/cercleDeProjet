@@ -146,7 +146,7 @@
                                 <tbody>
                                 <tr class="text-center">
                                     <th scope="row">Compteur</th>
-                                    <td id="demi pension"></td>
+                                    <td id="demi-pension"></td>
                                     <td id="petit dejeuner"></td>
                                     <td id="hebergement seul"></td>
                                     <td id="pension complete"></td>
@@ -225,23 +225,23 @@
             socket.send("Ping")
         }
 
-        if (typeof localStorage["demi pension"] == 'undefined' || localStorage["demi pension"] == 0) {
-          localStorage["demi pension"] = 0;
+        if (typeof localStorage["demi-pension"] == 'undefined' ) {
+          localStorage["demi-pension"] = 0;
           document.getElementById("demi-pension").innerText = localStorage["demi-pension"];
         }
-        if (typeof localStorage["petit dejeuner"] == 'undefined' || localStorage["demi pension"] == 0) {
+        if (typeof localStorage["petit dejeuner"] == 'undefined' || localStorage["petit dejeuner"] == 0) {
             localStorage["petit dejeuner"] = 0;
           document.getElementById("petit dejeuner").innerText = localStorage["petit dejeuner"];
         }
-        if (typeof localStorage["hebergement seul"] == 'undefined' || localStorage["demi pension"] == 0) {
+        if (typeof localStorage["hebergement seul"] == 'undefined' || localStorage["hebergement seul"] == 0) {
           localStorage["hebergement seul"] = 0;
           document.getElementById("hebergement seul").innerText = localStorage["hebergement seul"];
         }
-        if (typeof localStorage["pension complete"] == 'undefined' || localStorage["demi pension"] == 0) {
+        if (typeof localStorage["pension complete"] == 'undefined' || localStorage["pension complete"] == 0) {
           localStorage["pension complete"] = 0;
           document.getElementById("pension complete").innerText = localStorage["pension complete"];
         }
-        if (typeof localStorage["tout inclus"] == 'undefined' || localStorage["demi pension"] == 0) {
+        if (typeof localStorage["tout inclus"] == 'undefined' || localStorage["tout inclus"] == 0) {
           localStorage["tout inclus"] = 0;
           document.getElementById("tout inclus").innerText = localStorage["tout inclus"];
         }
