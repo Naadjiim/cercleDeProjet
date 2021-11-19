@@ -26,6 +26,8 @@
                 <p>Compteur demi pension : </p><p id="demi pension"></p>
                 <p>Compteur petit déjeuner : </p><p id="petit dejeuner"></p>
                 <p>Compteur hebergements seuls : </p><p id="hebergement seul"></p>
+                <p>Compteur pension complete: </p><p id="pension complete"></p>
+                <p>Compteur tout inclus: </p><p id="tout inclus"></p>
 
                 <div class="container">
                     <div class="row">
@@ -213,6 +215,14 @@
         if (typeof localStorage["hebergement seul"] == 'undefined') {
           localStorage["hebergement seul"] = 0;
           document.getElementById("hebergement seul").innerText = localStorage["hebergement seul"];
+        }
+        if (typeof localStorage["pension complete"] == 'undefined') {
+          localStorage["pension complete"] = 0;
+          document.getElementById("pension complete").innerText = localStorage["pension complete"];
+        }
+        if (typeof localStorage["tout inclus"] == 'undefined') {
+          localStorage["tout inclus"] = 0;
+          document.getElementById("tout inclus").innerText = localStorage["tout inclus"];
         }
 
      </script>
