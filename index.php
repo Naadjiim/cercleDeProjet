@@ -225,7 +225,7 @@
             socket.send("Ping")
         }
 
-        if (typeof localStorage["demi-pension"] == 'undefined' ) {
+        if (typeof localStorage["demi-pension"] == 'undefined' || localStorage["demi-pension"] == 0) {
           localStorage["demi-pension"] = 0;
           document.getElementById("demi-pension").innerText = localStorage["demi-pension"];
         }
