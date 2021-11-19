@@ -7,6 +7,7 @@ var tab = ["petit dejeune",
         "martinique",
         "hébergements seuls",
         "contre proposition",
+        "nuit",
         "nuits",
         "douze juillet deux mille vingt deux",
         "deux adultes deux enfants un bb",
@@ -34,6 +35,7 @@ function getText() {
                         document.getElementById('modal').style.display = "block";
                         document.getElementById('key').innerText = tab[i];
                         console.log(test[0])
+                        this.Close(a)
                 }
         }
         return test[0]
