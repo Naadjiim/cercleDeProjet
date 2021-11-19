@@ -1,21 +1,17 @@
 var tab = ["petit dejeune",
+        "petit déjeuner",
         "demi pension",
         "marseille",
         "pension complète",
-        "all inclusive",
-        "tous inclut",
+        "inclusive",
+        "tout inclus",
         "martinique",
-        "hébergements seuls",
+        "hébergement seul",
         "contre proposition",
         "nuit",
         "nuits",
         "douze juillet deux mille vingt deux",
         "deux adultes deux enfants un bb",
-        "bonjour",
-        'petit dejeuné',
-        'petit dejeuner',
-        'petit déjeuné',
-        'petit déjeuner',
         'demi-pension',
         'Marseille',
         'conditions d’annulation',
@@ -43,10 +39,11 @@ function getText() {
 }
 
 function Close(str){
-        console.log(str);
+        var strrr = str.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
         document.getElementById('modal').style.display = "none";
-        var new_value = parseInt(localStorage.getItem(str)) + 1
-        localStorage[str] = new_value;
-        document.getElementById(str).innerText = localStorage[str];
+        var new_value = parseInt(localStorage.getItem(strrr)) + 1
+        localStorage[strrr] = new_value;
+        document.getElementById(strrr).innerText = localStorage[strrr];
+        document.getElementById(text).value = "";
 }
 
