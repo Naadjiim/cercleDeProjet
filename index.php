@@ -23,12 +23,6 @@
                     <img class="rounded-circle img-profile" alt="logo" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: auto; text-align: center;">
                 </nav>
 
-                <p>Compteur demi pension : </p><p id="demi pension"></p>
-                <p>Compteur petit déjeuner : </p><p id="petit dejeuner"></p>
-                <p>Compteur hebergements seuls : </p><p id="hebergement seul"></p>
-                <p>Compteur pension complete: </p><p id="pension complete"></p>
-                <p>Compteur tout inclus: </p><p id="tout inclus"></p>
-
                 <div class="container">
                     <div class="row">
                         <div class="mb-4 mt-4">
@@ -116,7 +110,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-lg-5 col-xl-4">
+                        <div class="col-md-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary fw-bold m-0">Nombre de mots détectés</h6>
@@ -133,14 +127,37 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-md-8">
+                            <table class="table table-bordered" style="background-color: white">
+                                <thead>
+                                <tr class="text-center">
+                                    <th scope="col"></th>
+                                    <th scope="col">Demi pension</th>
+                                    <th scope="col">Petit déjeuner</th>
+                                    <th scope="col">Hébergement seul</th>
+                                    <th scope="col">pension complete</th>
+                                    <th scope="col">Tout inclus</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="text-center">
+                                    <th scope="row">Compteur</th>
+                                    <td id="demi pension"></td>
+                                    <td id="petit dejeuner"></td>
+                                    <td id="hebergement seul"></td>
+                                    <td id="pension complete"></td>
+                                    <td id="tout inclus"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © Exostismes 2021</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

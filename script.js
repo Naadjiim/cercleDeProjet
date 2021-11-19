@@ -3,21 +3,24 @@ var tab = ["petit dejeune",
         "demi pension",
         "marseille",
         "pension complète",
+        "pension complete",
         "inclusive",
         "tout inclus",
         "martinique",
         "hébergement seul",
+        "hébergements seuls",
         "contre proposition",
+        "deux adultes deux enfants et un bébé",
         "nuit",
         "nuits",
         "douze juillet deux mille vingt deux",
         "deux adultes deux enfants un bb",
-        'demi-pension',
-        'Marseille',
-        'conditions d’annulation',
-        'condition annulation',
-        'contre-proposition',
-        'contre proposition',
+        "demi-pension",
+        "Marseille",
+        "conditions d\'annulation",
+        "condition annulation",
+        "contre-proposition",
+        "contre proposition",
 ]
 
 function getText() {
@@ -44,6 +47,6 @@ function Close(str){
         var new_value = parseInt(localStorage.getItem(strrr)) + 1
         localStorage[strrr] = new_value;
         document.getElementById(strrr).innerText = localStorage[strrr];
-        document.getElementById(text).value = "";
+        document.getElementById('text').innerHTML = '';
 }
 
