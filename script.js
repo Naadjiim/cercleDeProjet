@@ -19,13 +19,11 @@ var tab = ["petit dejeune",
         'condition annulation',
         'contre-proposition',
         'contre proposition',
-
-
 ]
 
 function getText() {
-        var textt = document.getElementById('text').value.toLowerCase();
-        var text = textt.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+        var text = document.getElementById('text').value.toLowerCase();
+        //var text = textt.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
         for (var i = 0; i-1 <= tab.length; i++) {
                 var output = text.match(tab[i])
