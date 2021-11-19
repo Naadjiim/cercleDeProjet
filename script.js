@@ -1,9 +1,11 @@
 var tab = ["petit dejeune",
         "petit déjeuner",
         "demi pension",
+        "demi-pension",
         "marseille",
         "pension complète",
         "pension complete",
+        "all inclusive",
         "inclusive",
         "tout inclus",
         "martinique",
@@ -18,9 +20,15 @@ var tab = ["petit dejeune",
         "demi-pension",
         "Marseille",
         "conditions d\'annulation",
+        "conditions d\'annulation",
         "condition annulation",
         "contre-proposition",
         "contre proposition",
+        "deux mille pension",
+        "deux mille pensions",
+        "deux mi pension",
+        "inclusive",
+        "deux mil pension"
 ]
 
 function getText() {
