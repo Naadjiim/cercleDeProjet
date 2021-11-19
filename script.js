@@ -1,16 +1,26 @@
 var tab = ["petit dejeune",
+        'petit déjeuner',
         "demi pension",
         "marseille",
-        "pension complÃ¨te",
+        "pension complète",
         "all inclusive",
         "tous inclut",
         "martinique",
-        "hÃ©bergements seuls",
+        "hébergements seuls",
         "contre proposition",
-        "cinque nuits",
+        "nuits",
         "douze juillet deux mille vingt deux",
         "deux adultes deux enfants un bb",
-        "bonjour"
+        "bonjour",
+        'petit dejeuné',
+        'demi-pension',
+        'Marseille',
+        'conditions d’annulation',
+        'condition annulation',
+        'contre-proposition',
+        'contre proposition',
+
+
 ]
 
 function getText() {
@@ -21,6 +31,7 @@ function getText() {
                 if ( output == tab[i] ) {
                         var test = text.match(tab[i])
                         document.getElementById('modal').style.display = "block";
+                        document.getElementById('key').innerText = 'Vous avez prononcé : '+tab[i];
                         console.log(test[0])
                 }
         }

@@ -197,13 +197,13 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
+              <h5 class="modal-title">Mot clé détecté</h5>
               <button type="button" class="close" onclick="Close();">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Modal body text goes here.</p>
+              <p id='key'></p>
             </div>
           </div>
         </div>
