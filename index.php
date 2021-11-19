@@ -23,8 +23,9 @@
                     <img class="rounded-circle img-profile" alt="logo" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: auto; text-align: center;">
                 </nav>
 
-                <p id="bonjour"></p>
-                <p id="martinique"></p>
+                <p>Compteur Bonjour : </p><p id="bonjour"></p>
+                <p>Compteur Martinique : </p><p id="martinique"></p>
+                <p>Compteur demi pension : </p><p id="demi pension"></p>
 
 
 
@@ -251,11 +252,17 @@
             socket.send("Ping")
         }
 
-        if (typeof localStorage["martinique"] == 'undefined') {
-            localStorage["bonjour"] = 0;
+        if (typeof localStorage["demi pension"] == 'undefined') {
+          localStorage["demi pension"] = 0;
+          document.getElementById("demi pension").innerText = localStorage["demi pension"];
         }
-        if (typeof localStorage["martinique"] == 'undefined') {
-            localStorage["martinique"] = 0;
+        if (typeof localStorage["petit déjeuner"] == 'undefined') {
+            localStorage["petit déjeuner"] = 0;
+          document.getElementById("bonjour").innerText = localStorage["bonjour"];
+        }
+        if (typeof localStorage["hébergements seuls"] == 'undefined') {
+          localStorage["hébergements seuls"] = 0;
+          document.getElementById("hébergements seuls").innerText = localStorage["hébergements seuls"];
         }
 
      </script>

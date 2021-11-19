@@ -1,5 +1,4 @@
 var tab = ["petit dejeune",
-        'petit déjeuner',
         "demi pension",
         "marseille",
         "pension complète",
@@ -24,7 +23,8 @@ var tab = ["petit dejeune",
 ]
 
 function getText() {
-        var text = document.getElementById('text').value.toLowerCase();
+        var textt = document.getElementById('text').value.toLowerCase();
+        var text = textt.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
         for (var i = 0; i-1 <= tab.length; i++) {
                 var output = text.match(tab[i])
