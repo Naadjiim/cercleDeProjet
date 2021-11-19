@@ -221,23 +221,23 @@
             socket.send("Ping")
         }
 
-        if (typeof localStorage["demi pension"] == 'undefined') {
+        if (typeof localStorage["demi pension"] == 'undefined' || localStorage["demi pension"] == 0) {
           localStorage["demi pension"] = 0;
           document.getElementById("demi pension").innerText = localStorage["demi pension"];
         }
-        if (typeof localStorage["petit dejeuner"] == 'undefined') {
+        if (typeof localStorage["petit dejeuner"] == 'undefined' || localStorage["demi pension"] == 0) {
             localStorage["petit dejeuner"] = 0;
           document.getElementById("petit dejeuner").innerText = localStorage["petit dejeuner"];
         }
-        if (typeof localStorage["hebergement seul"] == 'undefined') {
+        if (typeof localStorage["hebergement seul"] == 'undefined' || localStorage["demi pension"] == 0) {
           localStorage["hebergement seul"] = 0;
           document.getElementById("hebergement seul").innerText = localStorage["hebergement seul"];
         }
-        if (typeof localStorage["pension complete"] == 'undefined') {
+        if (typeof localStorage["pension complete"] == 'undefined' || localStorage["demi pension"] == 0) {
           localStorage["pension complete"] = 0;
           document.getElementById("pension complete").innerText = localStorage["pension complete"];
         }
-        if (typeof localStorage["tout inclus"] == 'undefined') {
+        if (typeof localStorage["tout inclus"] == 'undefined' || localStorage["demi pension"] == 0) {
           localStorage["tout inclus"] = 0;
           document.getElementById("tout inclus").innerText = localStorage["tout inclus"];
         }
