@@ -28,7 +28,8 @@ var tab = ["petit dejeune",
         "deux mille pensions",
         "deux mi pension",
         "inclusive",
-        "deux mil pension"
+        "deux mil pension",
+        'bonjour'
 ]
 
 function getText() {
