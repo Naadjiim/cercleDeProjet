@@ -4,47 +4,23 @@ var tab = ["petit dejeune",
         "marseille",
         "pension complète",
         "pension complete",
-<<<<<<< HEAD
-        "all inclusive",
-=======
         "inclusive",
->>>>>>> bc3872a34011ba232154e48e2cf1c6fa3befdb14
         "tout inclus",
         "martinique",
         "hébergement seul",
         "hébergements seuls",
-<<<<<<< HEAD
-        "hébergements seul",
-        "hébergement seuls",
-=======
->>>>>>> bc3872a34011ba232154e48e2cf1c6fa3befdb14
         "contre proposition",
         "deux adultes deux enfants et un bébé",
         "nuit",
         "nuits",
         "douze juillet deux mille vingt deux",
         "deux adultes deux enfants un bb",
-<<<<<<< HEAD
-        'demi-pension',
-        'Marseille',
-        'conditions d’annulation',
-        'condition annulation',
-        'conditions d\'annulation',
-        'contre-proposition',
-        'contre proposition',
-        'deux mille pension',
-        'deux mille pensions',
-        'deux mi pension',
-        'inclusive',
-        'deux mil pension'
-=======
         "demi-pension",
         "Marseille",
         "conditions d\'annulation",
         "condition annulation",
         "contre-proposition",
         "contre proposition",
->>>>>>> bc3872a34011ba232154e48e2cf1c6fa3befdb14
 ]
 
 function getText() {
@@ -86,11 +62,7 @@ function Close(str){
         var new_value = parseInt(localStorage.getItem(strrr)) + 1
         localStorage[strrr] = new_value;
         document.getElementById(strrr).innerText = localStorage[strrr];
-<<<<<<< HEAD
-        document.getElementById('text').value = "";
-=======
         document.getElementById('text').innerHTML = '';
->>>>>>> bc3872a34011ba232154e48e2cf1c6fa3befdb14
 }
 
 
