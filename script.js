@@ -44,9 +44,9 @@ function getText() {
                                 || tab[i] =='deux mi pension' 
                                 || tab[i]=='deux mil pension' 
                                 || tab[i] == "demi pension"){
-
+                                
+                                document.getElementById('text').value = text.replace(tab[i],'demi-pension')
                                 tab[i] = 'demi-pension'
-                                document.getElementById('text').value = tab[i]
                         }
 
                         if (tab[i] == 'inclusive'){
