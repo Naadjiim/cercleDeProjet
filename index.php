@@ -197,13 +197,13 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Mot clé détecté</h5>
-              <button type="button" class="close" onclick="Close();">
+              <h5 class="modal-title black">Mot clé détecté</h5>
+              <button type="button" class="close" onclick="Close(document.getElementById('key').innerText);">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p id='key'></p>
+              <p id='key' class="black">Vous avez prononcé : </p>
             </div>
           </div>
         </div>
@@ -254,13 +254,9 @@
         if (typeof localStorage["martinique"] == 'undefined') {
             localStorage["bonjour"] = 0;
         }
-
         if (typeof localStorage["martinique"] == 'undefined') {
             localStorage["martinique"] = 0;
         }
-
-        document.getElementById("bonjour").innerText = localStorage["bonjour"];
-        document.getElementById("martinique").innerText = localStorage["martinique"];
 
      </script>
     

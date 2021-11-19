@@ -33,7 +33,7 @@ function getText() {
                 if ( output == tab[i] ) {
                         var test = text.match(tab[i])
                         document.getElementById('modal').style.display = "block";
-                        document.getElementById('key').innerText = 'Vous avez prononcé : '+tab[i];
+                        document.getElementById('key').innerText = tab[i];
                         console.log(test[0])
                         this.Close(a)
                 }
@@ -41,9 +41,11 @@ function getText() {
         return test[0]
 }
 
-function Close(){
+function Close(str){
+        console.log(str);
         document.getElementById('modal').style.display = "none";
-        //var new_value = parseInt(localStorage.getItem('Counterr')) + 1
-        //localStorage["bonjour"] = new_value;
+        var new_value = parseInt(localStorage.getItem(str)) + 1
+        localStorage[str] = new_value;
+        document.getElementById(str).innerText = localStorage[str];
 }
 
