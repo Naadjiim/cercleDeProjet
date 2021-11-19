@@ -52,8 +52,8 @@ function getText() {
 
                         if (tab[i] == 'inclusive'){
                                 
+                                document.getElementById('text').value = text.replace(tab[i],'all inclusive')
                                 tab[i] = 'all inclusive'
-                                document.getElementById('text').value = tab[i]
                         }
                         var test = text.match(tab[i])
                         document.getElementById('modal').style.display = "block";
