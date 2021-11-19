@@ -28,6 +28,7 @@ function getText() {
 
         for (var i = 0; i-1 <= tab.length; i++) {
                 var output = text.match(tab[i])
+                console.log(output);
                 if ( output == tab[i] ) {
                         var test = text.match(tab[i])
                         document.getElementById('modal').style.display = "block";
@@ -40,5 +41,7 @@ function getText() {
 
 function Close(){
         document.getElementById('modal').style.display = "none";
+        //var new_value = parseInt(localStorage.getItem('Counterr')) + 1
+        //localStorage["bonjour"] = new_value;
 }
 

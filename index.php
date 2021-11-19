@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -20,7 +20,7 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <img class="rounded-circle img-profile" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: auto; text-align: center;">
+                    <img class="rounded-circle img-profile" alt="logo" src="assets/img/avatars/810px-Raspberry_Pi_logo.svg.png" style="width: 43px;height: 47px;padding: -4px;margin: auto; text-align: center;">
                 </nav>
 
                 <p id="bonjour"></p>
@@ -237,10 +237,12 @@
             document.getElementById("cpu").innerText = CpuJson['CPUdata']['CpuUsage'].toFixed(2) + "%";
             document.getElementById("ram").innerText = CpuJson['CPUdata']['RAMUsage'] + "/3.7Go";
 
-            let text = CpuJson['CPUdata']['Text'];
-            if(text != "" && text != document.getElementById("text").innerText){
-                document.getElementById("text").value = text;
-                this.getText(text);
+            if(document.getElementById('modal').style.display != "block") {
+                let text = CpuJson['CPUdata']['Text'];
+                if (text != "" && text != document.getElementById("text").innerText) {
+                    document.getElementById("text").value = text;
+                    this.getText(text);
+                }
             }
         }
     
@@ -249,15 +251,16 @@
             socket.send("Ping")
         }
 
-
-        if (typeof localStorage["Counterr"] == 'undefined') {
-          localStorage["Counterr"] = 0;
-        }
-        if (typeof localStorage["Counterrr"] == 'undefined') {
-          localStorage["Counterrr"] = 0;
+        if (typeof localStorage["martinique"] == 'undefined') {
+            localStorage["bonjour"] = 0;
         }
 
-        console.log(document.getElementById('modal').style.display);
+        if (typeof localStorage["martinique"] == 'undefined') {
+            localStorage["martinique"] = 0;
+        }
+
+        document.getElementById("bonjour").innerText = localStorage["bonjour"];
+        document.getElementById("martinique").innerText = localStorage["martinique"];
 
      </script>
     
