@@ -29,7 +29,9 @@ var tab = ["petit dejeune",
         "deux mi pension",
         "inclusive",
         "deux mil pension",
-        'bonjour'
+        'bonjour',
+        'halle inclusive',
+        'hole inclusive'
 ]
 
 function getText() {
@@ -50,7 +52,7 @@ function getText() {
                                 tab[i] = 'demi-pension'
                         }
 
-                        if (tab[i] == 'inclusive'){
+                        if (tab[i] == 'inclusive' || tab[i] == 'hol inclusive', tab[i] == 'halle inclusive'){
                                 
                                 document.getElementById('text').value = text.replace(tab[i],'all inclusive')
                                 tab[i] = 'all inclusive'
